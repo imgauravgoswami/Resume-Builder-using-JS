@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">Developed by Gaurav Goswami</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" class="form-control" placeholder="Enter Here.....">
+
+                </div>
+                <div class="form-group mt-2">
+
+                    <label for="contactField">Contact Number</label>
+                    <input type="text" id="contactField" class="form-control" placeholder="Enter Here.....">
+
+                </div>
+                <div class="form-group mt-2">
+
+                    <label for="addressField">Address</label>
+                    <textarea id="addressField" rows="5" class="form-control" placeholder="Enter Here.."></textarea>
+                </div>
+
+                <p class="text-secondary mt-2">Profile Links</p>
+                <div class="form-group mt-2">
+
+                    <label for="lkdField">Linkedin</label>
+                    <input type="text" id="lkdField" class="form-control" placeholder="Enter Here.....">
+
+                </div>
+
+                <div class="form-group mt-2">
+
+                    <label for="ghdField">Github</label>
+                    <input type="text" id="ghField" class="form-control" placeholder="Enter Here.....">
+
+                </div>
+
+                <div class="form-group mt-2">
+
+                    <label for="ccField">Code-chef</label>
+                    <input type="text" id="ccField" class="form-control" placeholder="Enter Here.....">
+
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2">
+
+                    <label for="objField">Objective</label>
+                    <textarea id="objField" rows="4" class="form-control" placeholder="Enter Here.."></textarea>
+                </div>
+                <div class="form-group mt-2" id="Exp">
+
+                    <label for="expField">Experience</label>
+                    <textarea rows="3" class="form-control expField "  placeholder="Enter Here.."></textarea>
+
+                    <div class="container text-center mt-2 " id="weAddButton">
+                        <button onclick="addNewField()" class="btn btn-dark btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group mt-2" id="AQ">
+
+                    <label for="aqField">Academic Qualification</label>
+                    <textarea  rows="5" class="form-control aqField" placeholder="Enter Here.."></textarea>
+
+                    <div class="container text-center mt-2" id="weAddButton1">
+                        <button onclick="addAQField()" class="btn btn-dark btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container text-center mt-4">
+            <button class="btn btn-primary" onclick="printCV()">Generate CV</button>
+        </div>
+
+
+    </div>
+
+
+    <div class="container main2" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center gau ">
+
+                <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg"
+                    alt="" class="img-fluid image" />
+                <div class="container text-center mt-3">
+
+                    <p id="nameT1">Gaurav Goswami</p>
+                    <p id="contact">+91-8868012181, 91-9634593166</p>
+                    <p id="address">11/138, Barka Road, Baraut(Baghpat)</p>
+                    <hr>
+                    <p >
+                        <a id="linkedin1"
+                            href="https://www.linkedin.com/in/gaurav-goswami-6a9672230/" >https://www.linkedin.com/in/gaurav-goswami</a>
+                    </p>
+                    <p>
+                        <a id="gh" href="https://github.com/imgauravgoswami">https://github.com/imgauravgoswami</a>
+                    </p>
+                    <p>
+                        <a id="cc"
+                            href="https://www.codechef.com/users/gaurav5502">https://www.codechef.com/users/gaurav5502</a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <h1 class="text-center" style="font-weight:900" id="nameT2">Gaurav Goswami</h1>
+
+                <div class="card mt-4">
+                    <div class="card-header background gau">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="obj">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vitae sapiente eligendi
+                            quibusdam, in soluta ex minima nostrum ratione et qui accusantium fugit eaque assumenda
+                            pariatur dolor molestias nihil incidunt dolorem distinctio labore minus? Vel maxime quo
+                            asperiores explicabo esse, est amet eveniet laboriosam, iure ullam quibusdam? Odio, iure
+                            dolorum?</p>
+                    </div>
+                   
+
+                </div>
+
+
+
+                
+
+
+                <div class="card mt-4">
+                    <div class="card-header background gau">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="we">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="card mt-4">
+                    <div class="card-header background gau">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aq">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati?</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container text-center mt-4">
+            <button class="btn btn-primary" onclick="download()">Download CV</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

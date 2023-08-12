@@ -1,0 +1,18 @@
+/* #cv-form{
+    display: none;
+} */
+.main{
+display: none;
+}
+.main2{
+    display: none;
+}
+.image{
+    border: 2px solid red;
+width: 80%;
+}
+.gau{
+    border: 2px solid rgb(255, 0, 238);
+    background-color: rgb(83, 255, 246);
+
+}
